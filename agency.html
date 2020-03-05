@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>work</title>
+
+		<link
+			rel="stylesheet"
+			href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+			integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+			crossorigin="anonymous"
+		/>
+	</head>
+	<style>
+		body{
+			max-width: 1400px;
+		}
+		img {
+			height: 100%;
+			width: 100%;
+		}
+		.button1 {
+			padding: 10px 24px;
+			background-color: darkslateblue;
+			color: white;
+			border-radius: 7%;
+			border-style: none;
+			font-weight: 200;
+			letter-spacing: 1px;
+		}
+		.button2 {
+			padding: 10px 24px;
+			background-color: deepskyblue;
+			color: white;
+			border-radius: 7%;
+			border-style: none;
+			font-weight: 200;
+			letter-spacing: 1px;
+		}
+		section {
+			background-image: url(https://media.istockphoto.com/vectors/modern-concept-design-for-fintech-vector-id914422452?s=2048x2048);
+		}
+
+		#navbar {
+			margin-top: 0;
+			padding-top: 20px;
+  overflow: hidden;
+  background-color: white;
+}
+
+#navbar a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+#navbar a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+#navbar a.active {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.content {
+  padding: 16px;
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.sticky + .content {
+  padding-top: 60px;
+}
+		.nav {
+			display: flex;
+			grid-template-columns: 1fr 1fr 1fr;
+
+			background-color: deepskyblue;
+			text-align: end;
+
+			justify-content: space-between;
+			padding: 1px;
+			margin: 1px;
+			height: 30px;
+		}
+		ul {
+			list-style-type: none;
+			margin: 0;
+			padding: 0;
+			overflow: hidden;
+
+			text-align: center;
+		}
+
+		li {
+			display: inline-flex;
+		}
+
+		li a {
+			display: block;
+			color: black;
+			text-align: center;
+			padding: 14px 16px;
+			text-decoration: none;
+		}
+
+		li a:hover {
+			text-decoration: no;
+		}
+		li p {
+			color: rgb(75, 122, 168);
+			font-weight: 700;
+		}
+		.text {
+			text-align: center;
+			line-height: 1px;
+		}
+		h6 {
+			color: white;
+			font-weight: 300;
+			font-size: 12px;
+		}
+
+		.d-block {
+			width: 60px;
+			height: 300px;
+		}
+		main {
+			text-align: center;
+		}
+		.card {
+			height: 350px;
+			margin-bottom:10px;
+			background-position-x: center;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+  width: 400px;
+  z-index: -1;
+}
+
+.card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+.container {
+  padding: 2px 16px;
+}
+		.flex-box {
+			padding-left: 20%;
+			display: flex;
+			flex-wrap: wrap;
+			text-align: center;
+		}
+		.flex-box a {
+			text-emphasis: center;
+			text-decoration: none;
+			color: white;
+			justify-content: center;
+			padding: 40px;
+			font-weight: 800;
+		}
+
+		.box1 {
+			background-color: deepskyblue;
+			height: 60px;
+			width: 150px;
+		}
+		.box2 {
+			background-color: rgb(10, 123, 161);
+			height: 60px;
+			width: 150px;
+		}
+		.box3 {
+			background-color: darkslateblue;
+			height: 60px;
+			width: 150px;
+		}
+		.mySlides {
+			height: 50%;
+		}
+		.section2 {
+			list-style-type: none;
+			margin: 0;
+			padding: 0;
+			overflow: hidden;
+			background-color: white;
+			position: -webkit-sticky; /* Safari */
+			position: sticky;
+			top: 0;
+		}
+
+		
+		#customers {
+			font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+			border-collapse: collapse;
+			width: 100%;
+		}
+
+		#customers td,
+		#customers th {
+			border: 1px solid #ddd;
+			padding: 8px;
+		}
+
+		#customers tr:nth-child(even) {
+			background-color: #f2f2f2;
+		}
+
+		#customers tr:hover {
+			background-color: #ddd;
+		}
+
+		#customers th {
+			padding-top: 12px;
+			padding-bottom: 12px;
+			text-align: left;
+			background-color: deepskyblue;
+			color: white;
+		}
+		.map {
+			padding-left: 20px;
+		}
+		.mapouter {
+			position: relative;
+			text-align: right;
+			height: 400px;
+			width: 600px;
+		}
+		.gmap_canvas {
+			overflow: hidden;
+			background: none !important;
+			height: 300px;
+			width: 400px;
+		}
+		div#navcontainer {
+			margin-top: 10px;
+		
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+div.navitem {
+
+  padding: 5px;
+ 
+  
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+footer{
+	text-align: center;
+}
+	</style>
+	<body>
+		<div class="nav">
+			<div class="text">
+				<h6>Huntington Park 1234 abc blv, hunington ca po255</h6>
+			</div>
+			<div class="button">
+				<button class="button button1">Apply Now</button>
+				<button class="button button2">Associate Sign In</button>
+			</div>
+		</div>
+		<br>
+		<section>
+			<br>
+		
+		<div id="navbar">
+			<ul class="menu">
+				<h1>Title</h1>
+				<li>
+					<a class="activ" href=""><p>JOB SEEKERS</p></a>
+				</li>
+				<li>
+					<a href=""><p>ASSOCIATES</p></a>
+				</li>
+				<li>
+					<a href=""><p>EMPLOYERS</p></a>
+				</li>
+				<li>
+					<a href=""><p>ABOUT US</p></a>
+				</li>
+				<li>
+					<a href=""><p>CONTACT US</p></a>
+				</li>
+			</ul>
+	    </div>
+	</section>
+
+		<br />
+	<div class="content">
+		<h2 class="w3-center">Manual Slideshow</h2>
+
+		<div class="w3-content w3-display-container">
+			<img
+				class="mySlides"
+				src="https://media.istockphoto.com/photos/businessman-working-using-laptop-computer-with-strategy-and-growth-of-picture-id873806068"
+				style="width:100%"
+			/>
+			<img
+				class="mySlides"
+				src="https://media.istockphoto.com/photos/business-people-analyzing-statistics-financial-concept-picture-id669853862"
+				style="width:100%"
+			/>
+			<img
+				class="mySlides"
+				src="https://media.istockphoto.com/photos/female-boss-shows-presentation-on-screen-at-business-meeting-picture-id869282952"
+				style="width:100%"
+			/>
+			<img
+				class="mySlides"
+				src="https://media.istockphoto.com/photos/businesswoman-presenting-to-colleagues-at-boardroom-meeting-picture-id1010837210"
+				style="width:100%"
+			/>
+
+			<button class="w3-button w3-black w3-display-left" onclick="plusDivs(-1)">
+				&#10094;
+			</button>
+			<button class="w3-button w3-black w3-display-right" onclick="plusDivs(1)">
+				&#10095;
+			</button>
+		</div>
+
+		<main>
+			<div class="flex-box">
+				<a href=""
+					><div class="box1"><p>SEEKERS</p></div></a
+				>
+				<a href=""
+					><div class="box2"><p>EMPLOYERS</p></div></a
+				>
+				<a href=""
+					><div class="box3"><p>CONTACT US</p></div></a
+				>
+			</div>
+		</main>
+		<div class="header">
+			<h2>Scroll Down</h2>
+			<p>Scroll down to see the sticky effect.</p>
+		</div>
+		<table id="customers">
+			<tr>
+				<th>Company</th>
+				<th>Contact</th>
+				<th>Country</th>
+			</tr>
+			<tr>
+				<td>Alfreds Futterkiste</td>
+				<td>Maria Anders</td>
+				<td>Los Angeles</td>
+			</tr>
+			<tr>
+				<td>Berglunds snabbköp</td>
+				<td>Christina Berglund</td>
+				<td>Hunington</td>
+			</tr>
+			<tr>
+				<td>Centro comercial Moctezuma</td>
+				<td>Francisco Chang</td>
+				<td>El Monte</td>
+			</tr>
+			<tr>
+				<td>Ernst Handel</td>
+				<td>Roland Mendel</td>
+				<td>Los Angeles</td>
+			</tr>
+
+			<tr>
+				<td>Königlich Essen</td>
+				<td>Philip Cramer</td>
+				<td>City</td>
+			</tr>
+		</table>
+		<div id="header">
+			<div id="navcontainer">
+		
+			  <div class="navitem"><iframe
+				width="450"
+				height="310"
+				id="gmap_canvas"
+				src="https://maps.google.com/maps?q=huntington%20park&t=&z=13&ie=UTF8&iwloc=&output=embed"
+				frameborder="0"
+				scrolling="no"
+				marginheight="0"
+				marginwidth="0"
+			></iframe
+			><a
+				href="https://www.embedgooglemap.net/blog/divi-discount-code-elegant-themes-coupon/"
+				>embedgooglemap.net</a
+			>
+		</div>
+		<div class="card">
+		
+				
+			 
+			 
+		
+	</div>
+</div>
+
+	<footer>
+		<h3>Posted by: Fernando Vergara</h3>
+		<h4>Contact information: <a href="mailto:fernand0388@yahoo.com">fernand0388@yahoo.com</a>.</h4><a href="#" class="fa fa-facebook"></a>
+		<a href="#" class="fa fa-twitter"></a>
+		<a href="#" class="fa fa-google"></a>
+	  </footer>
+	  <script>
+		window.onscroll = function() {myFunction()};
+		
+		var navbar = document.getElementById("navbar");
+		var sticky = navbar.offsetTop;
+		
+		function myFunction() {
+		  if (window.pageYOffset >= sticky) {
+			navbar.classList.add("sticky")
+		  } else {
+			navbar.classList.remove("sticky");
+		  }
+		}
+		</script>
+		
+			  
+		<script>
+			$('.ELcarousel').carousel .on('keyboard.to.carousel', function ('true') {interval:2000})
+		</script>
+		<script>
+			var slideIndex = 1;
+			showDivs(slideIndex);
+
+			function plusDivs(n) {
+				showDivs((slideIndex += n));
+			}
+
+			function showDivs(n) {
+				var i;
+				var x = document.getElementsByClassName("mySlides");
+				if (n > x.length) {
+					slideIndex = 1;
+				}
+				if (n < 1) {
+					slideIndex = x.length;
+				}
+				for (i = 0; i < x.length; i++) {
+					x[i].style.display = "none";
+				}
+				x[slideIndex - 1].style.display = "block";
+			}
+		</script>
+	</body>
+</html>
